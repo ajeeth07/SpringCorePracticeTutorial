@@ -1,0 +1,14 @@
+	
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+		<bean id="engine" class="AutoWire_XML_ByName.Engine">
+		<property name="carName" value="Audi"></property>
+		</bean>	
+		<bean id="e2" class="AutoWire_XML_ByName.Engine" >
+		<property name="carName" value="Audi"></property>
+		</bean>	
+		<bean id="C1" class="AutoWire_XML_ByName.Car" autowire="byName">
+		</bean>
+</beans>	
+	

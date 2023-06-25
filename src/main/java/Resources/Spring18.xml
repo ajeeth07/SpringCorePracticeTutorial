@@ -1,0 +1,19 @@
+	
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+	<beans >
+	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+		<bean id="e1" class="AutoWire_Annotation.Engine">
+		<property name="carName" value="Audi1"></property>
+		</bean>	
+		<bean id="e2" class="AutoWire_Annotation.Engine">
+		<property name="carName" value="Audi2"></property>
+		</bean>	
+		
+		<bean id="C1" class="AutoWire_Annotation.Car" >
+		</bean>
+		
+</beans>	
+
+
+	

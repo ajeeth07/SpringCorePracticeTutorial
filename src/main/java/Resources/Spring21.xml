@@ -1,0 +1,27 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+   http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	<!-- Programatic approach -->
+	<bean id="BLC1" class="BeanLifeCycle.ProgramaticApproach">
+		<property name="name" value="Ajeeth"></property>
+	</bean>
+	<!-- XML approach -->
+	<bean id="BLXML" class="BeanLifeCycle.XMLApproach" init-method="initializing" destroy-method="destroying">
+		<property name="name" value="Ajeeth"></property>
+	</bean>
+	
+	<!-- Annotation based approach -->
+	<bean id="BLAN1" class="BeanLifeCycle.AnnotationApproach">
+		<property name="name" value="MSD"></property>
+	</bean>
+	<context:annotation-config/>
+
+</beans>	
+
+
+	

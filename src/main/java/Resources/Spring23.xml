@@ -1,0 +1,13 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="B" class="MethodReplacers.Banking">
+		<replaced-method name="CalInterest" replacer="RE"></replaced-method>
+
+	</bean>
+
+	<bean id="RE" class="MethodReplacers.NewClassImplForCalInter" />
+</beans>	
+
+
+	

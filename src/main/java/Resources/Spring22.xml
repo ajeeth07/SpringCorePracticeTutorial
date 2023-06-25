@@ -1,0 +1,32 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			<beans>
+<!-- Interface lookup DI -->
+<bean id="C" class="LookUpDI.Car">
+<lookup-method name="carengName" bean="e1"/>
+</bean>
+<bean id="e1" class="LookUpDI.Engine">
+<property name="engineName" value="2014AuditEngine"/>
+</bean>
+
+<!-- Abstract lookup DI -->
+<bean id="T" class="LookUpDI.Truck">
+<lookup-method name="truckEng"  bean="e2"/>
+</bean>
+<bean id="e2" class="LookUpDI.Engine">
+<property name="engineName" value="BENZTruck2019"/>
+</bean>
+
+<!-- Concrete class lookup DI -->
+<bean id="S" class="LookUpDI.Sample">
+<lookup-method name="sampEngine"  bean="e3"/>
+</bean>
+<bean id="e3" class="LookUpDI.Engine">
+<property name="engineName" value="SampleOverideEngine"/>
+</bean>
+
+
+</beans>	
+
+
+	

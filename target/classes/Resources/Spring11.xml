@@ -1,0 +1,93 @@
+	<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<bean id="LSM" class="Setterinjection_Collections.CollectionListSetMapDefaultChildClass">
+	<property name="list1">
+	<list>
+	<value>ajeeth</value>
+	<value>rick</value>
+	<value>gabriel</value>
+	<value>maggie</value>
+	</list>
+	</property>
+	
+	<property name="set1">
+	<set>
+	<value>123</value>
+	<value>123</value>
+	<value>456</value>
+	<value>789</value>
+	</set>
+	</property>	
+	
+	<property name="map1">
+	<map >
+	<entry key="1" value="m1"/>
+	<entry key="2" value="m2"/>
+	<entry key="3" value="m3"/>
+	<entry key="4" value="m4"/>
+	
+	</map>
+	</property>	
+	
+	</bean>
+	
+	<!-- DI for other sibiling implementation classes of set , list , map -->
+	
+	<bean id="LSMO" class="Setterinjection_Collections.CollectionListSetMapOtherChildClassDI">
+	<property name="list1">
+	
+	<util:list list-class="java.util.Vector">
+	<value>aj1</value>
+	<value>aj2</value>
+	<value>aj3</value>
+	</util:list>
+	
+	</property>
+	
+	<property name="set1">
+	<util:set set-class="java.util.HashSet">
+	
+	<value>23</value>
+	<value>67</value>
+	<value>99</value>
+	
+	</util:set>
+	
+	</property>
+	
+	<property name="map1">
+	
+	<util:map map-class="java.util.TreeMap">
+	<entry key="1" value="Audi"></entry>
+	<entry key="2" value="Honda"></entry>
+	<entry key="3" value="jaguar"></entry>
+		
+	</util:map>
+	
+	
+	</property>
+	
+	</bean>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</beans>	

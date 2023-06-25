@@ -1,0 +1,45 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			
+		<beans>
+		<bean id="e1" class="Setterinjection_Primary_SecondaryArray.Engine">
+		<property name="carName" value="2107Audi111"></property>
+		</bean>
+		<bean id="e2" class="Setterinjection_Primary_SecondaryArray.Engine">
+		<property name="carName" value="2107Audi222"></property>
+		</bean>
+		<bean id="e3" class="Setterinjection_Primary_SecondaryArray.Engine">
+		<property name="carName" value="2107Audi333"></property>
+		</bean>
+		<bean id="e4" class="Setterinjection_Primary_SecondaryArray.Engine">
+		<property name="carName" value="2107Audi444"></property>
+		</bean>
+		
+		<bean id="C1" class="Setterinjection_Primary_SecondaryArray.Car">
+		<property name="engine">
+		<list>
+		<ref bean="e1"></ref>
+		<ref bean="e2"></ref>
+		<ref bean="e3"></ref>
+		<ref bean="e4"></ref>
+		</list>
+		</property>
+		
+		<property name="carbranchesInIndia">
+		<list>
+		<value>HYd</value>
+		<value>CBE</value>
+		<value>CHE</value>
+		<value>MUM</value>
+		</list>
+		
+		
+		
+		</property>
+		</bean>
+		
+		
+		
+		
+		
+		</beans>
